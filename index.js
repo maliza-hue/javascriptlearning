@@ -145,4 +145,152 @@ let person = {
     hobbies: ["coding", "eating"],
 
 }
+function grade (score) {
+if (score >= 80) {
+    return 'A'
+} else if (score >= 70) {
+    return 'B'
+} else if(score >= 60){
+    return 'C'
+} else if (score >= 50) {
+    return 'D'
+} else {
+    return 'F'
+}
+}
+console.log(grade(65));
 
+let scores=[
+    {name: "Annet", score: 85},
+    {name: "Martha", score: 63},
+    {name: "Maliza", score: 75},
+    {name: "John", score: 57},
+    {name: "Jane", score: 39},
+    {name: "Annet", grade: 95}
+
+];
+
+scores.forEach(student => {
+    let grade;
+    if ( student.score >= 90) {
+        grade = 'A'
+    } else if (student.score >=80) {
+        grade = 'B'
+    } else if (student.score >= 70) {
+        grade = "C"
+    } else if (student.score >= 60) {
+        grade = 'D'
+    } else if (student.score >= 50) {
+        grade = 'E'
+    } else {
+        grade ='F'
+    }
+
+
+console.log(student.name +": " + student.score + " and received grade " + grade)
+})
+
+// functions
+//reusable blocks of code that perform a specific task. they can take parameters and return values
+
+// function declaration // we use the function keyword to declare a 
+
+function functionName (){
+    // code to be executed
+}
+
+function funcName (parameter) {
+    // code to be executed
+    return parameter; // this is the value that will be returned when the function is called
+}
+
+function funcWithParameters(param1, param2) {}
+
+// working example of a function
+function returnSomeValue () {
+    let value = "This is my first function in JavaScript";
+
+    console.log(value);
+}
+returnSomeValue ();// This will call the function and execute the code inside it
+
+function returnParameter(parameter) {
+    return parameter;
+}
+
+// console.log (returnParameter("Hello, this is my second function in Javascript"));
+const result = returnParameter("Hello, this is my second function in Javascript");
+console.log(result)
+
+function addNumbers(x,y) {
+    return x+y;
+}
+const sum = addNumbers(4+5);
+console.log(sum)
+
+// loops
+//1. for loop
+
+for (let i = 0; i < 7; i++) {
+    console.log(i)
+}
+// deccreamenting for loop
+for( let i =7; i>0; i--){
+    console.log(i)
+}
+
+const myCars = ["volvo","benz","kia","toyota"]
+console.log(myCars)
+ const numberofCars =myCars.length;//this gives you the number of items
+ console.log(numberofCars);
+
+ for (let i = 0; i < myCars.length; i++){
+    console.log(myCars[i]);
+ }
+
+ for(let car of myCars){
+    console.log(car);
+ }
+
+ for(let car of myCars){
+    function printCarPosition(car){
+        const index = myCars.indexOf(car);
+        console.log("The position of " + car + " in the array is " +  index );
+
+    }
+    printCarPosition(car);
+    console.log(car);
+
+ }
+ //2. while loop
+//  while (condition) {
+//     // code to be executed as long as the condition is true
+//  }
+// example of an incrementing while loop
+ let id = 0;
+ while (id < 7) {
+    console.log("From the while loop" ,id);
+    id++;
+ }
+//example of a decrementing while loop
+let id2 = 7;
+while (id2 > 0) {
+    console.log("From the while loop",id2);
+    id2--;
+} 
+
+let password = "";
+
+while (password !=="1234") {
+    password = prompt("please enter password");
+}
+// 3. do-while loop
+// do {
+    // code to be executed
+    //}  while (condition);
+
+    let i = 0;
+    do{
+        console.log("From the do-while loop", i);
+        i++;
+    } while (i<7);
